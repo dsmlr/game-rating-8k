@@ -1,0 +1,7 @@
+# Image files are created locally by extract_screenshots.py / fetch_igdb_screenshots.py
+screenshots/
+__pycache__/
+.ipynb_checkpoints/
+
+# Not published yet
+captions.parquet
