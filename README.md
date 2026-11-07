@@ -1,4 +1,4 @@
-# ESRB Multimodal Game Dataset (2K)
+# Towards Automated Video Game Age Rating: Bridging Visual and Textual Modalities through Multimodal Fusion
 
 8,830 games labelled with their ESRB rating (5 classes), used for multimodal ESRB rating prediction.
 
