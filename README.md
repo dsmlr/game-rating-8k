@@ -84,3 +84,22 @@ python fetch_igdb_screenshots.py --size 0   # keep the original resolution
 
 Already downloaded files are skipped, so the script can be re-run to resume. Screenshots that have since
 been removed from IGDB are reported at the end.
+
+## Citation
+
+If you use this dataset, please cite:
+
+```bibtex
+@inproceedings{jintawatsakoon2027towards,
+  author    = {Jintawatsakoon, Supanat and Pasupa, Kitsuchart},
+  title     = {Towards Automated Video Game Age Rating: Bridging Visual and Textual Modalities Through Multimodal Fusion},
+  booktitle = {Neural Information Processing},
+  series    = {Communications in Computer and Information Science},
+  volume    = {3201},
+  chapter   = {29},
+  publisher = {Springer},
+  year      = {2027},
+  doi       = {10.1007/978-981-92-8137-4_29},
+  url       = {https://doi.org/10.1007/978-981-92-8137-4_29}
+}
+```
