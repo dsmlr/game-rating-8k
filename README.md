@@ -1,6 +1,10 @@
 # Towards Automated Video Game Age Rating: Bridging Visual and Textual Modalities through Multimodal Fusion
 
-8,830 games labelled with their ESRB rating (5 classes), used for multimodal ESRB rating prediction.
+**game-rating-8k** is the dataset used in the paper
+[*Towards Automated Video Game Age Rating: Bridging Visual and Textual Modalities through Multimodal Fusion*](https://doi.org/10.1007/978-981-92-8137-4_29)
+(see [Citation](#citation)).
+
+It contains 8,830 games labelled with their ESRB rating (5 classes), used for multimodal ESRB rating prediction.
 
 | E | E10 | T | M | AO | total |
 |---|---|---|---|---|---|
