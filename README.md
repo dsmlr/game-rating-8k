@@ -91,7 +91,7 @@ been removed from IGDB are reported at the end.
 
 ## Citation
 
-If you use this dataset, please cite:
+If you use this dataset in your research, we kindly ask that you cite the following paper:
 
 ```bibtex
 @inproceedings{jintawatsakoon2027towards,
