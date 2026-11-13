@@ -32,6 +32,12 @@ Sources: IGDB (8,014 games), JAST (657), EROLAB (159).
     `extract_screenshots.py` (JAST / EROLAB) or `fetch_igdb_screenshots.py` (IGDB)
   - `source_url`: original image URL (JAST / EROLAB only)
   - `width`, `height`: size of the original image (the image files are resized to 480x480)
+- `captions.parquet`: one row per screenshot (60,282), for all sources including IGDB
+  - `screenshot_id`, `game_id`, `data_source`
+  - `caption`: original caption generated with LLaVA-7B (8 screenshots have an empty caption)
+  - `revised_caption`: manually reviewed and/or name-masked version of the caption
+    (11,277 screenshots, null otherwise); see [Captions](#captions).
+    Use `revised_caption` when present, else `caption`: `df.revised_caption.fillna(df.caption)`
 - `screenshots_JAST_EROLAB/part-*.parquet`: the 6,764 JAST / EROLAB screenshots as raw JPEG bytes
   (columns `screenshot_id`, `game_id`, `data_source`, `file`, `image_bytes`)
 - `extract_screenshots.py`: writes those images to `screenshots/`
@@ -88,6 +94,22 @@ python fetch_igdb_screenshots.py --size 0   # keep the original resolution
 
 Already downloaded files are skipped, so the script can be re-run to resume. Screenshots that have since
 been removed from IGDB are reported at the end.
+
+## Captions
+
+Captions were generated with LLaVA-7B from each screenshot and then processed as follows:
+
+- **Manual review:** 10,064 captions were manually reviewed and corrected.
+- **Rating mentions:** no caption mentions an age rating, rating board or age gate
+  (e.g. "rated M", "ESRB", "18+").
+- **Game names:** titles of games in the dataset, including other games (e.g. "likely Call of Duty"),
+  were replaced with `[NAME]` (1,264 screenshots). Matching is case-sensitive on the title words,
+  so ordinary words are kept ("the forest"), but a few proper nouns that share a name with a game
+  are also masked (e.g. "World War II"). Character names that are not part of a game title
+  (e.g. "Mario") are not masked.
+
+Both the manual corrections and the name masking are stored in `revised_caption`; `caption` keeps the
+original LLaVA-7B output.
 
 ## Citation
 
