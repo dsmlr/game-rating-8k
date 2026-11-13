@@ -1,4 +1,4 @@
-# Towards Automated Video Game Age Rating: Bridging Visual and Textual Modalities through Multimodal Fusion
+# game-rating-8k
 
 **game-rating-8k** is the dataset used in the paper
 [*Towards Automated Video Game Age Rating: Bridging Visual and Textual Modalities through Multimodal Fusion*](https://doi.org/10.1007/978-981-92-8137-4_29)
