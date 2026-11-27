@@ -123,6 +123,7 @@ If you use this dataset in your research, we kindly ask that you cite the follow
   series    = {Communications in Computer and Information Science},
   volume    = {3201},
   chapter   = {29},
+  pages     = {413--427},
   publisher = {Springer},
   year      = {2027},
   doi       = {10.1007/978-981-92-8137-4_29},
